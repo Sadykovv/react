@@ -7,22 +7,25 @@ const Navbar = () => {
   return (
     <nav className={navbarcss.nav}>
       <div className={navbarcss.item}>
-        <NavLink to="/Profile" className={navData => navData.isActive ? navbarcss.active:""} >Profile</NavLink>
+        <NavLink to="/profile" className={navData => navData.isActive ? navbarcss.active:""} >Profile</NavLink>
       </div>
       <div className={navbarcss.item}>
-        <NavLink to="/Dialogs" className={navData => navData.isActive ? navbarcss.active:""}>Dialogs</NavLink>
+        <NavLink to="/dialogs" className={navData => navData.isActive ? navbarcss.active:""}>Dialogs</NavLink>
       </div>
       <div className={navbarcss.item}>
-        <NavLink to="/Settings" className={navData => navData.isActive ? navbarcss.active:""}>Settings</NavLink>
+        <NavLink to="/settings" className={navData => navData.isActive ? navbarcss.active:""}>Settings</NavLink>
+      </div>
+      <div className={navbarcss.item}>
+        <NavLink to="/users" className={navData => navData.isActive ? navbarcss.active:""}>Users</NavLink>
       </div>
       <br/>
       <div className={navbarcss.item}>
-        <NavLink to="/Friends" className={navData => navData.isActive ? navbarcss.active:""}>Friends</NavLink> <br/>
+        <NavLink to="/friends" className={navData => navData.isActive ? navbarcss.active:""}>Friends</NavLink> <br/>
         Alisher 
         Danil 
         Inna <br/>
       </div>
-
+    
     </nav>
   )
 }

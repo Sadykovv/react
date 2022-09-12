@@ -22,21 +22,21 @@ let initialState = {
 }
 
 const dialogsReducer = (state=initialState, action) => {
-    if (action.type === SEND_MESSAGE) {
-        // let newMessage = {
-        //     id: 'Inna',
-        //     message: this._state.dialogsPage.newMessageText,
-        // };
-        let newMessage = state.newMessageText;
-        state.messagesData.push({ id: 6, message: newMessage });
-        state.newMessageText = '';
-
-    }
-    else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-        state.newMessageText = action.newText;
-
-    }
+    switch (action.type) {
+        case SEND_MESSAGE :
+            let newMessage = state.newMessageText;
+        return {...state,
+            messagesData:[...state.messagesData,{id: 6, message: newMessage} ],
+            newMessageText:'',
+        }
+    
+   case UPDATE_NEW_MESSAGE_TEXT: 
+        return {...state,
+        newMessageText:action.newText
+        }
+    default:
     return state;
+}
 }
 
 export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE })
