@@ -24,6 +24,7 @@ const Navbar = () => {
         Alisher 
         Danil 
         Inna <br/>
+        
       </div>
     
     </nav>
